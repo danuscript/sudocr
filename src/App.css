@@ -2,11 +2,20 @@ h1 {
   margin: 0;
 }
 
+body {
+  height: 100dvh;
+  background-color: black;
+}
+
 .App {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   background-color: black;
   position: relative;
 }
@@ -38,8 +47,7 @@ button {
 
 .video {
   box-sizing: border-box;
-  border: 2px solid white;
-  height: calc(100vh - 6em);
+  height: calc(100dvh - 6em);
   max-width: 100vw;
   position: relative;
 }
@@ -57,17 +65,16 @@ button {
 }
 
 .image {
-  /* max-height: calc(100vh - 6em);
-  height: 100vh; */
   max-width: 100vw;
-  /* height: calc(100vh - 6em); */
+  object-fit: contain;
 }
 
-.imageWrapper {
-  height: calc(100vh - 6em);
+.wrapper {
+  width: 100%;
+  height: 100%;
   max-width: 100vw;
   display: flex;
+  box-sizing: border-box;
   justify-content: center;
-  align-items: center;
-  border: 2px solid white;
+  overflow: hidden;
 }
